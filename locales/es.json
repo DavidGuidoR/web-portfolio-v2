@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, <br>soy David Guido",
+    "subtitle": "Desarrollador de Software",
+    "btn": "¡Mira mi trabajo!"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "job1_title": "Ingeniero de Software",
+    "job1_company": "Tech Corp",
+    "job1_date": "2022 - Presente",
+    "job1_desc": "Desarrollé herramientas internas y características para la aplicación principal.",
+    "edu_title": "Educación",
+    "edu1_title": "Ingeniería en Ciencias de la Computación",
+    "edu1_school": "Universidad de Tecnología",
+    "edu1_date": "2018 - 2022",
+    "edu1_desc": "Graduado con honores, especializado en ingeniería de software."
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "view_project": "Ver Proyecto"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "desc": "Actualmente estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras decir hola, ¡haré todo lo posible para responderte!",
+    "btn": "Saludar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,59 @@
+:root {
+  --bg-main: #0a192f;
+  --bg-secondary: #112240;
+  --bg-tertiary: #233554;
+
+  --accent-cyan: #64ffda;
+  --accent-blue: #00f0ff;
+  --accent-cyan-hover: rgba(100, 255, 218, 0.1);
+
+  --text-main: #ccd6f6;
+  --text-secondary: #8892b0;
+  --text-cyan: #64ffda;
+  --font-main: 'Outfit', sans-serif;
+
+  /* Font Sizes */
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading-sm: 28px;
+  --fz-heading-md: clamp(40px, 5vw, 60px);
+  --fz-heading-lg: clamp(50px, 8vw, 80px);
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --section-padding: 100px 0;
+
+  /* Transitions */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* Border Radius */
+  --br-sm: 4px;
+  --br-md: 8px;
+  --br-lg: 16px;
+  --br-pill: 50px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(2, 12, 27, 0.7);
+  --shadow-lg: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
