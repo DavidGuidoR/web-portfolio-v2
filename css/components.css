@@ -36,6 +36,12 @@
   margin-bottom: var(--spacing-xl);
 }
 
+.description {
+  font-size: var(--fz-md);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+
 /* Experience Cards */
 .experience-grid {
   display: grid;
@@ -74,6 +80,12 @@
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
   display: block;
+}
+
+.exp-description {
+  font-size: var(--fz-md);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
 }
 
 /* Skills Pills */
