@@ -15,18 +15,6 @@ function updateLangUI() {
     }
 }
 
-async function fetchTranslations(lang) {
-    try {
-        const response = await fetch(`locales/${lang}.json`);
-        if (!response.ok) throw new Error('Network response was not ok');
-        const translations = await response.json();
-        return translations;
-    } catch (error) {
-        console.error("Could not load translations", error);
-        return null; // Fallback
-    }
-}
-
 function applyTranslations(translations) {
     if (!translations) return;
 
@@ -39,18 +27,24 @@ function applyTranslations(translations) {
             if (!value) break;
         }
 
+        // Apply if value exists
         if (value) {
             el.innerHTML = value;
         }
     });
 }
 
-async function setLanguage(lang) {
+function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
     updateLangUI();
-    const translations = await fetchTranslations(lang);
-    applyTranslations(translations);
+
+    // Direct from the translations object (avoids CORS)
+    if (typeof portfolioTranslations !== 'undefined') {
+        applyTranslations(portfolioTranslations[lang]);
+    } else {
+        console.error("No translations found! Ensure translations.js is loaded.");
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
