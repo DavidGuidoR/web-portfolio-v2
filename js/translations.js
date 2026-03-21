@@ -6,7 +6,9 @@ const portfolioTranslations = {
       experience: "Experience",
       skills: "Skills",
       projects: "Projects",
-      contact: "Contact"
+      contact: "Contact",
+      resume: "Resume",
+      resumeLink: "https://drive.google.com/file/d/1-Wb8WkDHcYKH79dTncggSjNI5G8RfhfK/view?usp=sharing"
     },
     hero: {
       title: "Hello, <br>I'm David Guido",
@@ -41,7 +43,7 @@ const portfolioTranslations = {
     contact: {
       title: "Get in Touch",
       desc: "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
-      btn: "Say Hello"
+      btn: "Contact me"
     },
     footer: {
       rights: "All rights reserved."
@@ -53,7 +55,9 @@ const portfolioTranslations = {
       experience: "Experiencia",
       skills: "Habilidades",
       projects: "Proyectos",
-      contact: "Contacto"
+      contact: "Contacto",
+      resume: "Currículum",
+      resumeLink: "https://drive.google.com/file/d/1vBd6QZZO4IrKhhR6NAN-LItirSfrBPMc/view?usp=sharing"
     },
     hero: {
       title: "Hola, <br>soy David Guido",
@@ -88,7 +92,7 @@ const portfolioTranslations = {
     contact: {
       title: "Ponte en Contacto",
       desc: "Actualmente estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras decir hola, ¡haré todo lo posible para responderte!",
-      btn: "Saludar"
+      btn: "Contactame"
     },
     footer: {
       rights: "Todos los derechos reservados."

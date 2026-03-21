@@ -41,7 +41,14 @@ function setLanguage(lang) {
 
     // Direct from the translations object (avoids CORS)
     if (typeof portfolioTranslations !== 'undefined') {
-        applyTranslations(portfolioTranslations[lang]);
+        const translations = portfolioTranslations[lang];
+        applyTranslations(translations);
+        
+        // Update resume link dynamically
+        const resumeBtn = document.getElementById('resume-btn');
+        if (resumeBtn && translations.nav && translations.nav.resumeLink) {
+            resumeBtn.href = translations.nav.resumeLink;
+        }
     } else {
         console.error("No translations found! Ensure translations.js is loaded.");
     }
