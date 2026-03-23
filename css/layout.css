@@ -7,7 +7,9 @@
 
 .section {
   padding: var(--section-padding);
+  padding-bottom: 80px;
   min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,6 +63,10 @@
   font-size: var(--fz-heading-sm);
   font-weight: 700;
   color: var(--text-main);
+}
+
+.logo:hover {
+  color: var(--accent-cyan);
 }
 
 .nav-links {
@@ -180,6 +186,10 @@ footer {
 @media (max-width: 768px) {
   .section {
     padding: 80px 0;
+  }
+
+  .hero {
+    padding-top: 130px;
   }
 
   .social-links {

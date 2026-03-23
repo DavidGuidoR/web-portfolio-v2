@@ -44,4 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Animate scroll indicators only when their section is active
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const indicator = entry.target.querySelector('.scroll-indicator');
+            if (indicator) {
+                if (entry.isIntersecting) {
+                    indicator.classList.add('animating');
+                } else {
+                    indicator.classList.remove('animating');
+                }
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(sec => observer.observe(sec));
 });

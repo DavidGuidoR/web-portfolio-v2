@@ -14,7 +14,14 @@ const portfolioTranslations = {
       title: "Hello, <br>I'm David Guido",
       subtitle: "Software Developer",
       description: "Computer Systems Engineer & Full-Stack Developer. Focused on building efficient interfaces and robust architectures with an emphasis on scalability and software development best practices.",
-      btn: "Check out my work!"
+      btn: "Check out my work!",
+      profile_name: "David Guido",
+      profile_role: "Full-stack developer",
+      profile_email: "guidod890@gmail.com",
+      profile_education: "Computer Systems Engineering",
+      profile_location: "Mexico",
+      profile_availability: "Full-time / Part-time",
+      profile_experience: "+1 Year of Experience"
     },
     experience: {
       title: "Experience",
@@ -63,7 +70,14 @@ const portfolioTranslations = {
       title: "Hola, <br>soy David Guido",
       subtitle: "Desarrollador de Software",
       description: "Ingeniero en Sistemas y Desarrollador Full-Stack. Especializado en construir interfaces eficientes y arquitecturas robustas con un enfoque en escalabilidad y buenas prácticas de desarrollo.",
-      btn: "¡Mira mi trabajo!"
+      btn: "¡Mira mi trabajo!",
+      profile_name: "David Guido",
+      profile_role: "Desarrollador Full-stack",
+      profile_email: "guidod890@gmail.com",
+      profile_education: "Ing. en Sistemas Computacionales",
+      profile_location: "México",
+      profile_availability: "Tiempo completo / Medio tiempo",
+      profile_experience: "+1 Año de Experiencia"
     },
     experience: {
       title: "Experiencia",

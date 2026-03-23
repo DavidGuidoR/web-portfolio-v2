@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">DG<span class="accent">.</span></a>
+            <a href="#home" class="logo"><i class="fa-solid fa-code"></i>DG<span class="accent">.</span></a>
 
             <div class="nav-links">
                 <a href="#home" data-i18n="nav.home">Home</a>
@@ -38,7 +38,6 @@
                     <a href="https://github.com/DavidGuidoR" target="_blank" aria-label="GitHub"><i
                             class="fab fa-github"></i></a>
                 </div>
-                <a href="#" id="resume-btn" target="_blank" class="btn btn-sm" data-i18n="nav.resume">Resume</a>
                 <!-- Language Selector -->
                 <div class="lang-selector">
                     <button id="lang-btn" class="lang-btn">
@@ -63,15 +62,56 @@
     <main>
         <!-- Home / Hero Section -->
         <section id="home" class="section hero">
-            <div class="container">
-                <h1 data-i18n="hero.title">Hello, <br>I'm David Guido</h1>
-                <p class="subtitle" data-i18n="hero.subtitle">Software Developer</p>
-                <p class="description" data-i18n="hero.description">
-                    Computer Systems Engineer & Full-Stack Developer.
-                    Focused on building efficient interfaces and robust architectures with an emphasis on scalability
-                    and software development best practices.
-                </p>
-                <a href="#projects" class="btn" data-i18n="hero.btn">Check out my work!</a>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero.title">Hello, <br>I'm David Guido</h1>
+                    <p class="subtitle" data-i18n="hero.subtitle">Software Developer</p>
+                    <p class="description" data-i18n="hero.description">
+                        Computer Systems Engineer & Full-Stack Developer.
+                        Focused on building efficient interfaces and robust architectures with an emphasis on
+                        scalability
+                        and software development best practices.
+                    </p>
+                    <a href="#projects" class="btn" data-i18n="hero.btn">Check out my work!</a>
+                </div>
+
+                <div class="hero-profile-card">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h2 class="profile-name" data-i18n="hero.profile_name">David Guido</h2>
+                    <p class="profile-role" data-i18n="hero.profile_role">Full-Stack developer</p>
+
+                    <ul class="profile-info">
+                        <li><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="hero.profile_education">Computer
+                                Systems Engineering</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i> <span
+                                data-i18n="hero.profile_location">Mexico</span></li>
+                        <li><i class="fa-solid fa-briefcase"></i> <span data-i18n="hero.profile_availability">Full-time
+                                / Freelancer</span></li>
+                        <li><i class="fa-solid fa-clock"></i> <span data-i18n="hero.profile_experience">+1 Year of
+                                Experience</span></li>
+                    </ul>
+
+                    <div class="skills-container profile-skills">
+                        <div class="skill-pill"><i class="fab fa-html5"></i> HTML</div>
+                        <div class="skill-pill"><i class="fab fa-css3-alt"></i> CSS</div>
+                        <div class="skill-pill"><i class="fab fa-js"></i> JS</div>
+                        <div class="skill-pill"><i class="fab fa-react"></i> REACT</div>
+                    </div>
+
+                    <a href="#" id="resume-btn" target="_blank" class="btn" data-i18n="nav.resume">Download CV <i
+                            class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <a href="#experience" aria-label="Scroll down">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </a>
             </div>
         </section>
 
@@ -128,6 +168,14 @@
                     </div>
                 </div>
             </div>
+            <div class="scroll-indicator">
+                <a href="#skills" aria-label="Scroll down">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </a>
+            </div>
         </section>
 
         <!-- Skills Section -->
@@ -151,6 +199,14 @@
                     <div class="skill-pill"><i class="fab fa-docker"></i> Docker</div>
                     <div class="skill-pill"><i class="fas fa-terminal"></i> Terminal</div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#projects" aria-label="Scroll down">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </a>
             </div>
         </section>
 
@@ -227,6 +283,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator return-home">
+                <a href="#home" aria-label="Scroll to top">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </a>
             </div>
         </section>
 
