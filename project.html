@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | David Guido</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f128dca28b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        /* Specific project page styles */
+        .project-detail-hero {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            min-height: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: var(--fz-md);
+            margin-bottom: var(--spacing-xl);
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-header h1 {
+            font-size: var(--fz-heading-md);
+            color: var(--text-main);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .project-header .role {
+            font-size: var(--fz-lg);
+            color: var(--accent-cyan);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .carousel-container {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            width: 100%;
+            height: 500px;
+            border-radius: var(--br-md);
+            overflow: hidden;
+
+            background-color: var(--bg-main);
+        }
+
+        .project-gallery {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .project-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .project-gallery img {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            scroll-snap-align: start;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(10, 25, 47, 0.7);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        .carousel-container:hover .carousel-btn {
+            opacity: 1;
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--accent-cyan);
+            color: var(--bg-main);
+        }
+
+        .carousel-btn.prev {
+            left: 20px;
+        }
+
+        .carousel-btn.next {
+            right: 20px;
+        }
+
+        .project-body {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 992px) {
+            .project-body {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .carousel-container {
+                height: 300px;
+            }
+
+            .carousel-btn {
+                opacity: 1;
+                width: 35px;
+                height: 35px;
+            }
+
+            .carousel-btn.prev {
+                left: 10px;
+            }
+
+            .carousel-btn.next {
+                right: 10px;
+            }
+        }
+
+        .project-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .project-section h3 {
+            font-size: var(--fz-xl);
+            color: var(--text-main);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+            font-size: var(--fz-md);
+        }
+
+        .project-sidebar .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-sidebar .skill-pill {
+            background-color: var(--bg-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar from index.html -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="logo"><i class="fa-solid fa-code"></i>DG<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="index.html#home" data-i18n="nav.home">Home</a>
+                <a href="index.html#experience" data-i18n="nav.experience">Experience</a>
+                <a href="index.html#skills" data-i18n="nav.skills">Skills</a>
+                <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+                <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/david-guido-rodriguez-a1a9152b2/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/DavidGuidoR" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+                <div class="lang-selector">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="en">English (EN)</button>
+                        <button class="lang-option" data-lang="es">Español (ES)</button>
+                    </div>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section project-detail-hero">
+            <div class="container">
+                <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> <span
+                        data-i18n="project.back">Back to Projects</span></a>
+
+                <div class="project-header">
+                    <h1 id="pd-title">Cargando...</h1>
+                    <p id="pd-role" class="role">Cargando...</p>
+                </div>
+
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous image"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="project-gallery" id="pd-gallery">
+                        <!-- Images injected via JS -->
+                    </div>
+                    <button class="carousel-btn next" id="carousel-next" aria-label="Next image"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h3 data-i18n="project.overview">Overview</h3>
+                            <p id="pd-overview"></p>
+                        </div>
+                        <div class="project-section">
+                            <h3 data-i18n="project.challenge">Challenge & Solution</h3>
+                            <p id="pd-challenge"></p>
+                        </div>
+                    </div>
+                    <div class="project-sidebar">
+                        <div class="project-section">
+                            <h3 data-i18n="project.tech">Technologies</h3>
+                            <div id="pd-tech" class="tech-list">
+                                <!-- Tags injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> David Guido. <span data-i18n="footer.rights">All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/project.js"></script>
+</body>
+
+</html>
